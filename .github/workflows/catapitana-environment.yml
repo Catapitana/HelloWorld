@@ -1,0 +1,14 @@
+name: Catapitana Organization CI workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Say hello!
+        run: echo Hello from Catapitana Organization!
+      - name: Use environment variable
+        run: echo env.DEV_VARIABLE
