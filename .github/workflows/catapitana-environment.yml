@@ -1,4 +1,4 @@
-name: Catapitana Organization CI workflow
+name: Catapitana Environment
 
 on:
   workflow_dispatch:
