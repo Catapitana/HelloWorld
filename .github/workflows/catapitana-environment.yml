@@ -14,8 +14,6 @@ jobs:
     needs: hello
     environment: dev
     runs-on: ubuntu-latest
-    env:
-      DEV_VARIABLE_HELLO: ${{ env.DEV_VARIABLE }}
     steps:
       - name: Use environment variable
-        run: echo ${{ env.DEV_VARIABLE_HELLO }}
+        run: echo ${{ secrets.DEV_VARIABLE }}
