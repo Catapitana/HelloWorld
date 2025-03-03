@@ -11,8 +11,11 @@ jobs:
         run: echo Hello from Catapitana Organization!
 
   env-variable:
+    needs: hello
     environment: dev
     runs-on: ubuntu-latest
-    steps: 
+    env:
+      DEV_VARIABLE_HELLO: ${{ env.DEV_VARIABLE }}
+    steps:
       - name: Use environment variable
-        run: echo ${{ env.DEV_VARIABLE }}
+        run: echo ${{ env.DEV_VARIABLE_HELLO }}
