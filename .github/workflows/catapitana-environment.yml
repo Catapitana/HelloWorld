@@ -4,11 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    environment: dev
+  hello:
     runs-on: ubuntu-latest
     steps: 
       - name: Say hello!
         run: echo Hello from Catapitana Organization!
+
+  env-variable:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps: 
       - name: Use environment variable
-        run: echo env.DEV_VARIABLE
+        run: echo ${{ env.DEV_VARIABLE }}
